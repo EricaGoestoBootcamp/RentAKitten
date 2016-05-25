@@ -1,0 +1,28 @@
+﻿body {
+    padding-top: 0;
+}
+
+
+.jumbotron {
+    /* add bootstrap jumbotron background image */
+    /*background-image: url("images/FurTexture4_2.png");  */
+    background-color: slategray;
+     opacity: 0.7;  
+    min-height: 200px;
+    /* change bootstrap jumbotron text color */
+}
+
+.col-md-3 
+{
+    background-color: navajowhite;
+    min-height:170px;
+    border: 20px;
+     
+
+}
+
+.border1{
+    border: 3px solid;
+    border-radius: 25px;
+    border-color: #70C092S;
+}

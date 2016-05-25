@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c8bc2c5bd8494fbb9c9fab8569e8e9d2" Name="Diagram1">
+        <EntityTypeShape EntityType="RentAKittenModel.Customer" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.Kitten" Width="1.5" PointX="7.125" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.Rating" Width="1.5" PointX="1.5" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.Rent" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.RentalDetail" Width="1.5" PointX="4.625" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.State" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentAKittenModel.sysdiagram" Width="1.5" PointX="9.625" PointY="4" IsExpanded="true" />
+        <AssociationConnector Association="RentAKittenModel.FK_Customers_States" ManuallyRouted="false" />
+        <AssociationConnector Association="RentAKittenModel.FK_Rent_Customers" ManuallyRouted="false" />
+        <AssociationConnector Association="RentAKittenModel.FK_Rent_Kittens" ManuallyRouted="false" />
+        <AssociationConnector Association="RentAKittenModel.FK_Rent_Ratings" ManuallyRouted="false" />
+        <AssociationConnector Association="RentAKittenModel.FK_Rent_RentalDetail" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

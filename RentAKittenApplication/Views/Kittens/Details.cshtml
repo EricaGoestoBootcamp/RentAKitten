@@ -1,0 +1,58 @@
+﻿@model RentAKittenApplication.Models.Kitten
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kitten</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.KittenName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KittenName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KittenColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KittenColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FurLength)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FurLength)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Personality)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Personality)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KittyImage)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KittyImage)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.KittenID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

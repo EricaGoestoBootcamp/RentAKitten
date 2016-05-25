@@ -1,0 +1,63 @@
+﻿@model IEnumerable<RentAKittenApplication.Models.Rent>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kitten.KittenName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating.RatingID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RentalDetail.RentalDetailID)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReturnDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Customer.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Kitten.KittenName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Rating.RatingID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RentalDetail.RentalDetailID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RentalID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RentalID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RentalID })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,66 @@
+﻿@model RentAKittenApplication.Models.Rent
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Rent</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ReturnDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ReturnDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Customer.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Customer.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kitten.KittenName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kitten.KittenName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Rating.RatingID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Rating.RatingID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentalDetail.RentalDetailID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentalDetail.RentalDetailID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RentalID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
