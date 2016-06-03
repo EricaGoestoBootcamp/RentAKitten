@@ -1,4 +1,7 @@
-﻿@model IEnumerable<RentAKittenApplication.Models.Kitten>
+﻿<script src="http://itemslide.github.io/dist/itemslide.min.js"></script>
+<script src="~/Scripts/rentakitten.js"></script>
+
+@model IEnumerable<RentAKittenApplication.Models.Kitten>
 
 @{
     ViewBag.Title = "Index";
@@ -9,6 +12,19 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
+
+<div id="scrolling">
+    <ul>
+
+@foreach (var item in Model)
+{
+        <li>
+            <img src="@Html.DisplayFor(modelItem => item.KittyImage)" />
+        </li>
+}
+    </ul>
+</div>
+
 <table class="table">
     <tr>
         <th>
@@ -54,4 +70,8 @@
     </tr>
 }
 
+
+
 </table>
+
+
