@@ -15,10 +15,37 @@ namespace RentAKittenApplication.Controllers
         private RentAKittenEntities db = new RentAKittenEntities();
 
         // GET: Kittens
+        /* default Index method
         public ActionResult Index()
         {
             return View(db.Kittens.ToList());
         }
+        */
+        public ActionResult Index(string sortOrder)
+        {
+            ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewBag.FurLength = sortOrder == "FurLength" ? "FurLength_desc" : "FurLength";
+            
+            var kittens = from k in db.Kittens
+                          select k;
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    kittens = kittens.OrderByDescending(k => k.KittenName);
+                    break;
+                case "FurLength":
+                    kittens = kittens.OrderBy(k => k.FurLength);
+                    break;
+                case "FurLength_desc":
+                    kittens = kittens.OrderByDescending(k => k.FurLength);
+                    break;
+                default:
+                    kittens = kittens.OrderBy(k => k.KittenName);
+                    break;
+            }
+            return View(kittens.ToList());
+        }
+
 
         // GET: Kittens/Details/5
         public ActionResult Details(int? id)
