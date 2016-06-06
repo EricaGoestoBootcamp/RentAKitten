@@ -1,94 +1,45 @@
 ﻿body {
-    padding-top: 0;
+    padding-top: 10px;
 }
 
+/* color scheme notes:
+    navajo white, triad, complementary and shades
+*/
 
 .jumbotron {
     /* add bootstrap jumbotron background image */
     /*background-image: url("images/FurTexture4_2.png");  */
-    background-color: slategray;
-     opacity: 0.7;  
+    background-color: #40372B;
+    opacity: 0.8;
     min-height: 200px;
     /* change bootstrap jumbotron text color */
+    color: #ADDCFF;
 }
 
-.col-md-3 
+.row {
+    margin: 0;
+}
+#disclaimer {
+    font-size: x-small;
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    
+}
+
+.col-md-4
 {
+    color: #558BB2;
     background-color: navajowhite;
     min-height:170px;
-    border: 20px;
-     
-
-}
+ }
 
 .border1{
-    border: 3px solid;
-    border-radius: 25px;
-    border-color: #70C092;
+    border: 5px solid;
+    border-radius: 20px;
+    border-color: #ADDCFF;
 }
 
-/* carousel from http://itemslide.github.io/ */
-/* Add to docs */
-#scrolling{/*frame*/
-    position:fixed;
-    top:58%;
-
-    background:#6885FF;/*FF473D*/
-    height:38%;
-    width:100%;
-
-    /* overflow: hidden;  */
+.carousel-inner > .item > img {
+    margin: 0 auto;
 }
-
-ul {
-    /*Add if you want to disable the option of selecting the text while sliding
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none; */
-
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    /*top:10%;*/
-    margin-top:4vh;
-    height:80%;
-
-    list-style-type: none;
-
-    -webkit-transform-style: preserve-3d;
-	/* -ms-transform-style: preserve-3d;  */
-	transform-style: preserve-3d;
-}
-
-li {
-
-    font-size:8vmin;/*cool*/
-    float: left;
-    width:25vw;
-    min-width: 250px;
-    height: 100%;
-    color: #000;
-    font-weight: 300;
-    text-align: center;
-    border-radius: 30px;
-    -webkit-border-radius: 30px;
-    /* opera? visual studio doesn't recognize it nor does Google */
-    /* -o-border-radius: 30px;  */
-    -moz-border-radius: 30px;
-    cursor: pointer;
-    background: #FFF;
-    -webkit-transform:  scale(0.95);
-    -ms-transform:  scale(0.95);
-    -moz-transform:  scale(0.95);
-    transform: scale(0.95);
-}
-
-.itemslide-active
-{/*applied to current active item*/
-    -webkit-transform:  scale(1);
-    -ms-transform:  scale(1);
-    -moz-transform:  scale(1);
-    transform: scale(1);
-}
-/* end carousel */

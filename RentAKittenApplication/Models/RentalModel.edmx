@@ -26,9 +26,9 @@
           </Key>
           <Property Name="KittenID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="KittenName" Type="nvarchar" MaxLength="25" Nullable="false" />
-          <Property Name="KittenColor" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="FurLength" Type="nchar" MaxLength="10" Nullable="false" />
-          <Property Name="Personality" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="KittenColor" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FurLength" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Personality" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="KittyImage" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Ratings">
@@ -225,9 +225,9 @@
           </Key>
           <Property Name="KittenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="KittenName" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="KittenColor" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="FurLength" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Personality" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="KittenColor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FurLength" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Personality" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Rents" Relationship="Self.FK_Rent_Kittens" FromRole="Kittens" ToRole="Rent" />
           <Property Name="KittyImage" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
