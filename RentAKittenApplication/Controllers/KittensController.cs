@@ -24,7 +24,7 @@ namespace RentAKittenApplication.Controllers
         public ActionResult Index(string sortOrder)
         {
             ViewBag.NameSortParm = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
-            ViewBag.FurLength = sortOrder == "FurLength" ? "FurLength_desc" : "FurLength";
+            ViewBag.FurLengthParm = sortOrder == "FurLength" ? "FurLength_desc" : "FurLength";
             
             var kittens = from k in db.Kittens
                           select k;
@@ -150,5 +150,6 @@ namespace RentAKittenApplication.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

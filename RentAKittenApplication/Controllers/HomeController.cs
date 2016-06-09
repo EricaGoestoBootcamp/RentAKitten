@@ -26,5 +26,6 @@ namespace RentAKittenApplication.Controllers
 
             return View();
         }
+
     }
 }

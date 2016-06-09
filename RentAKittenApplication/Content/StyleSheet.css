@@ -43,3 +43,10 @@
 .carousel-inner > .item > img {
     margin: 0 auto;
 }
+
+#carousel-caption-style {
+    background-color: dimgray;
+    padding-left: 7px;
+    padding-right: 7px;
+    opacity: .7;
+}

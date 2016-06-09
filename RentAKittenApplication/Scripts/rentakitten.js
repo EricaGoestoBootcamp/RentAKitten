@@ -16,5 +16,12 @@
         $("#myCarousel").carousel("prev");
     });
 
- 
+    //this is for the alternate carousel
+    var carousel;
+    $(document).ready(function () {
+        carousel = $("ul");
+        carousel.itemslide();
+    });
+
+
 });
