@@ -3,9 +3,17 @@
 }
 
 /* color scheme notes:
-    navajo white, triad, complementary and shades
+    navajo white FFDEAD, triad, complementary and shades
 */
 
+/*navbar customizations*/
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    background-color: #597F75;
+}
+
+.nav  {
+    margin-bottom: 3px;
+}
 .jumbotron {
     /* add bootstrap jumbotron background image */
     /*background-image: url("images/FurTexture4_2.png");  */

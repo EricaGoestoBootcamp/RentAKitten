@@ -62,11 +62,14 @@ namespace RentAKittenApplication.Controllers
             return View(kitten);
         }
 
+ 
+
         // GET: Kittens/Create
         public ActionResult Create()
         {
             return View();
         }
+
 
         // POST: Kittens/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 

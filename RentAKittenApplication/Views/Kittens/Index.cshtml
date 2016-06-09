@@ -1,5 +1,4 @@
 ﻿
-
 @model IEnumerable<RentAKittenApplication.Models.Kitten>
 
 @{
@@ -41,59 +40,60 @@
             <span class="sr-only">Next</span>
         </a>
     </div>
-
-
-    <table class="table">
-        <tr>
-            <th>
-                @Html.ActionLink("Kitten Name", "Index", new { sortOrder = ViewBag.NameSortParm })
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.KittenColor)
-            </th>
-            <th>
-                @Html.ActionLink("Fur Length", "Index", new { sortOrder = ViewBag.FurLengthParm })
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Personality)
-            </th>
-            <!--  <th>
-                 @Html.DisplayNameFor(model => model.KittyImage)
-             </th> -->
-            <th></th>
-        </tr>
-
-        @foreach (var item in Model)
-        {
+    <p></p>
+   
+        <!-- table of kittens -->
+        <table class="table">
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KittenName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.KittenColor)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FurLength)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Personality)
-                </td>
-                <!--  <td>
-                     @Html.DisplayFor(modelItem => item.KittyImage)
-                 </td> -->
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.KittenID }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.KittenID }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.KittenID })
-                </td>
+                <th>
+                    @Html.ActionLink("Kitten Name", "Index", new { sortOrder = ViewBag.NameSortParm })
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.KittenColor)
+                </th>
+                <th>
+                    @Html.ActionLink("Fur Length", "Index", new { sortOrder = ViewBag.FurLengthParm })
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Personality)
+                </th>
+                <!--  <th>
+                     @Html.DisplayNameFor(model => model.KittyImage)
+                 </th> -->
+                <th></th>
             </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KittenName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.KittenColor)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FurLength)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Personality)
+                    </td>
+                    <!--  <td>
+                         @Html.DisplayFor(modelItem => item.KittyImage)
+                     </td> -->
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.KittenID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.KittenID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.KittenID })
+                    </td>
+                </tr>
+            }
+
+
+
+        </table>
+
+        @section scripts {
+            <script src="~/Scripts/rentakitten.js"></script>
         }
-
-
-
-    </table>
-
-    @section scripts {
-        <script src="~/Scripts/rentakitten.js"></script>
-    }
 </div>

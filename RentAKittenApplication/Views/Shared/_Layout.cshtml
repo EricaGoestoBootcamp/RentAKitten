@@ -12,7 +12,10 @@
     <link href="~/Content/StyleSheet.css" rel="stylesheet" />
 </head>
 <body>
-
+    <ul class="nav nav-pills">
+        <li role="presentation" class="active">@Html.ActionLink("Home", "Index", "Home")</li>
+        <li role="presentation">@Html.ActionLink("Kittens", "../Kittens")</li>
+     </ul>
 
  
         @RenderBody()
